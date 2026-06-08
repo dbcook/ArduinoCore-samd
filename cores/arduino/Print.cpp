@@ -222,14 +222,16 @@ size_t Print::println(const Printable& x)
   return n;
 }
 
-void Print::printf(const char format[], ...)
+int Print::printf(const char format[], ...)
 {
+  int nchars;
   char buf[PRINTF_BUF];
   va_list ap;
   va_start(ap, format);
-  vsnprintf(buf, sizeof(buf), format, ap);
+  nchars = vsnprintf(buf, sizeof(buf), format, ap);
   write(buf);
   va_end(ap);
+  return nchars;
 }
 
 // Private Methods /////////////////////////////////////////////////////////////

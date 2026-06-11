@@ -1,6 +1,6 @@
 {
   "name": "framework-arduino-samd-adafruit",
-  "version": "1.10717.1",
+  "version": "1.0717.1",
   "description":  "Dave Cook patch of AdaFruit ArduinoCore-samd framework package"
   "keywords": [
     "framework",
